@@ -1,7 +1,6 @@
-import { Where } from "sequelize/lib/utils";
 import Orders from "../models/order.js";
 import User from "../models/user.js";
-import { where } from "sequelize";
+
 
 
 // Metodos de Busca

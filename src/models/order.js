@@ -2,6 +2,12 @@ import { DataTypes } from "sequelize";
 import sequelize from "../config/database.js";
 
 const Orders = sequelize.define("Orders", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
+    },
     status: {
         type: DataTypes.ENUM(
             "RECEBIDO",
