@@ -41,11 +41,12 @@ export const listProduct = async (id) => {
 }
 
 export const updatePrice = async (id, preco) => {
-    if(!id) {
+    const ID = Number(id)
+    if(!ID) {
         throw new Error("Não foi possivel acessar o produto sem id");
     }
 
-    const product = await productRepositories.findById(id)
+    const product = await productRepositories.findById(ID)
 
     if(!product) {
         throw new Error("Produto inexistente");
@@ -70,11 +71,12 @@ export const updateName = async (id, nome) => {
 }
 
 export const updateProduct = async (id, data) => {
-    if(!id) {
+    const ID = Number(id)
+    if(!ID) {
         throw new Error("Não foi possivel acessar o produto sem id");
     }
 
-    const product = await productFindById(id)
+    const product = await productFindById(ID)
 
     if (!product) {
         throw new Error("Produto inexistente");
@@ -88,11 +90,12 @@ export const updateProduct = async (id, data) => {
 }
 
 export const deleteProduct = async (id) => {
-    if(!id) {
+    const ID = Number(id)
+    if(!ID) {
         throw new Error("Não foi possivel acessar o produto sem id");
     }
 
-    const product = await productRepositories.findById(id)
+    const product = await productRepositories.findById(ID)
 
     if (!product) {
         throw new Error("Produto inexistente");

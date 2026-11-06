@@ -18,6 +18,7 @@ export const findAll = async (where) => {
 
 export const findOne = async (where) => {
     const product = await Product.findOne({ where })
+    return product
 }
 
 //Metodo de Criação

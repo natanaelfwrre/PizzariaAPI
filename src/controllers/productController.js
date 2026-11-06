@@ -26,7 +26,7 @@ export const list = async (req, res, next) => {
 
 export const update = async (req, res, next) => {
     try {
-        const product = await updateProduct(req.body)
+        const product = await updateProduct(req.params.id, req.body)
         return res.status(200).json(product)
     } catch (e) {
         e.statusCode = 400
